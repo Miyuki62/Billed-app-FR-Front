@@ -18,12 +18,12 @@ const row = (bill) => {
     </tr>
     `;
 };
-
+//ajout trie des date
 const rows = (data) => {
 	return data && data.length
 		? data
 				.sort(function (a, b) {
-					return a.date < b.date ? 1 : -1;
+					return new Date(a.date) < new Date(b.date) ? 1 : -1;
 				})
 				.map((bill) => row(bill))
 				.join("")
