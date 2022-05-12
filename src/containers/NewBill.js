@@ -27,7 +27,7 @@ export default class NewBill {
 		const email = JSON.parse(localStorage.getItem("user")).email;
 		formData.append("file", file);
 		formData.append("email", email);
-
+		//bug corriger
 		if (
 			fileName.endsWith(".jpg") ||
 			fileName.endsWith(".jpeg") ||

@@ -23,7 +23,7 @@ const rows = (data) => {
 	return data && data.length
 		? data
 				.sort(function (a, b) {
-					return new Date(a.date) < new Date(b.date) ? 1 : -1;
+					return new Date(a.date) < new Date(b.date) ? 1 : -1; //bug corriger
 				})
 				.map((bill) => row(bill))
 				.join("")
